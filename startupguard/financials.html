@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Financials · StartupGuard AI</title>
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="financials">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+  <div class="app-main">
+    <header class="page-header">
+      <div class="page-header-row">
+        <button type="button" class="icon-button menu-button" id="menu-button" aria-label="Open navigation" data-icon="menu" data-icon-class="lg"></button>
+        <div class="page-title">
+          <h1>Financials</h1>
+          <p>Monitor your startup's financial performance and runway.</p>
+        </div>
+        <div class="header-actions" id="header-actions"></div>
+        <div class="header-account" id="header-account"></div>
+      </div>
+      <div class="header-actions-mobile" id="header-actions-mobile"></div>
+    </header>
+
+    <main class="page-body">
+      <div class="grid grid-sm-2 grid-lg-3 grid-2xl-6" id="kpis" aria-live="polite"></div>
+
+      <div class="grid grid-lg-2">
+        <section class="card">
+          <header class="card-header"><div><h2>Revenue vs Expenses</h2><p id="range-sub">Monthly</p></div></header>
+          <div class="card-body">
+            <div id="trend-legend"></div>
+            <div class="chart-box h240"><canvas id="trend-chart" role="img" aria-label="Area chart of monthly revenue and expenses"></canvas></div>
+          </div>
+        </section>
+        <section class="card">
+          <header class="card-header"><div><h2>Monthly Profit / Loss</h2><p>Revenue minus expenses per month</p></div></header>
+          <div class="card-body">
+            <div class="chart-box h256" style="margin-top:0"><canvas id="profit-chart" role="img" aria-label="Bar chart of monthly profit or loss"></canvas></div>
+          </div>
+        </section>
+        <section class="card">
+          <header class="card-header"><div><h2>Where the Money Goes</h2><p>Expenses by type per month</p></div></header>
+          <div class="card-body">
+            <div id="costs-legend"></div>
+            <div class="chart-box h240"><canvas id="costs-chart" role="img" aria-label="Stacked bar chart of monthly expenses by type"></canvas></div>
+          </div>
+        </section>
+        <section class="card">
+          <header class="card-header"><div><h2>Customer Growth</h2><p>Active customers at each month's record</p></div></header>
+          <div class="card-body">
+            <div class="chart-box h256" style="margin-top:0"><canvas id="customers-chart" role="img" aria-label="Line chart of customer count"></canvas></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid grid-xl-3">
+        <section class="card clip xl-span-2">
+          <header class="card-header"><div><h2>Financial History</h2><p>Monthly breakdown, newest first</p></div></header>
+          <div class="table-wrap" style="margin-top:16px" id="history"></div>
+        </section>
+        <section class="card ai-border">
+          <header class="card-header">
+            <div><h2>AI Financial Analysis</h2><p id="ai-meta">Claude's review of the financial records</p></div>
+            <span class="chip-icon md tone-purple" data-icon="sparkles"></span>
+          </header>
+          <div class="card-body stack" id="analysis" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js, version-pinned. Falls back to the local copy when the CDN is unreachable (offline demo). -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script>window.Chart || document.write('<script src="js/vendor/chart.umd.min.js"><\/script>');</script>
+  <script src="js/icons.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/financials.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Business Profile · StartupGuard AI</title>
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="settings">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+  <div class="app-main">
+    <header class="page-header">
+      <div class="page-header-row">
+        <button type="button" class="icon-button menu-button" id="menu-button" aria-label="Open navigation" data-icon="menu" data-icon-class="lg"></button>
+        <div class="page-title">
+          <h1>Business Profile</h1>
+          <p>The company, financial and market details StartupGuard works from.</p>
+        </div>
+        <div class="header-actions" id="header-actions"></div>
+        <div class="header-account" id="header-account"></div>
+      </div>
+      <div class="header-actions-mobile" id="header-actions-mobile"></div>
+    </header>
+
+    <main class="page-body">
+      <div class="notice" data-icon="info">Read only. These details come from the database; change them there (database/seed.sql, then <code>php database/build.php --fresh</code>) and reload.</div>
+      <div id="profile" style="display:flex;flex-direction:column;gap:16px" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

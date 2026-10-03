@@ -1,0 +1,2 @@
+# Keep the database file, SQL and build script out of reach of the browser (Apache / XAMPP).
+Require all denied

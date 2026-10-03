@@ -1,0 +1,360 @@
+{
+  "description": "Current fiscal year financials for five large US companies, taken from their SEC filings",
+  "source": "SEC EDGAR companyfacts API (10-Q and 10-K filings)",
+  "generated": "2026-10-03",
+  "units": "USD, whole dollars",
+  "important": [
+    "Each company has a different fiscal year, so the periods covered differ in dates and length; compare quarters or growth rates rather than totals.",
+    "Balance sheet figures (total_assets, total_liabilities, shareholders_equity) are as of each quarter end.",
+    "null means the company does not report that figure; see each company's notes."
+  ],
+  "companies": [
+    {
+      "name": "Apple",
+      "legal_name": "Apple Inc.",
+      "ticker": "AAPL",
+      "cik": 320193,
+      "sector": "Technology",
+      "fiscal_year": 2026,
+      "status": "in progress: 3 of 4 quarters filed, annual 10-K not yet in this data",
+      "period_covered": {
+        "start": "2025-09-28",
+        "end": "2026-06-27",
+        "months": 9
+      },
+      "notes": [
+        "Fiscal 2026 starts 2025-09-28.",
+        "Some quarterly figures (Q2, Q3) are not reported separately and are calculated by subtracting cumulative totals."
+      ],
+      "quarters": [
+        {
+          "quarter": "Q1",
+          "period_start": "2025-09-28",
+          "period_end": "2025-12-27",
+          "revenue": 143756000000,
+          "gross_profit": 69231000000,
+          "operating_income": 50852000000,
+          "net_income": 42097000000,
+          "research_and_development": 10887000000,
+          "operating_cash_flow": 53925000000,
+          "total_assets": 379297000000,
+          "total_liabilities": 291107000000,
+          "shareholders_equity": 88190000000
+        },
+        {
+          "quarter": "Q2",
+          "period_start": "2025-12-28",
+          "period_end": "2026-03-28",
+          "revenue": 111184000000,
+          "gross_profit": 54781000000,
+          "operating_income": 35885000000,
+          "net_income": 29578000000,
+          "research_and_development": 11419000000,
+          "operating_cash_flow": 28702000000,
+          "total_assets": 371082000000,
+          "total_liabilities": 264591000000,
+          "shareholders_equity": 106491000000
+        },
+        {
+          "quarter": "Q3",
+          "period_start": "2026-03-29",
+          "period_end": "2026-06-27",
+          "revenue": 109417000000,
+          "gross_profit": 54770000000,
+          "operating_income": 35695000000,
+          "net_income": 29789000000,
+          "research_and_development": 11729000000,
+          "operating_cash_flow": 34369000000,
+          "total_assets": 383266000000,
+          "total_liabilities": 275746000000,
+          "shareholders_equity": 107520000000
+        }
+      ],
+      "year_to_date": {
+        "period_start": "2025-09-28",
+        "period_end": "2026-06-27",
+        "revenue": 364357000000,
+        "gross_profit": 178782000000,
+        "operating_income": 122432000000,
+        "net_income": 101464000000,
+        "research_and_development": 34035000000,
+        "operating_cash_flow": 116996000000
+      }
+    },
+    {
+      "name": "Microsoft",
+      "legal_name": "MICROSOFT CORPORATION",
+      "ticker": "MSFT",
+      "cik": 789019,
+      "sector": "Technology",
+      "fiscal_year": 2026,
+      "status": "complete: the annual 10-K has been filed",
+      "period_covered": {
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "months": 12
+      },
+      "notes": [
+        "Fiscal 2026 starts 2025-07-01.",
+        "Some quarterly figures (Q4) are not reported separately and are calculated by subtracting cumulative totals."
+      ],
+      "quarters": [
+        {
+          "quarter": "Q1",
+          "period_start": "2025-07-01",
+          "period_end": "2025-09-30",
+          "revenue": 77673000000,
+          "gross_profit": 53630000000,
+          "operating_income": 37961000000,
+          "net_income": 27747000000,
+          "research_and_development": 8146000000,
+          "operating_cash_flow": 45057000000,
+          "total_assets": 636351000000,
+          "total_liabilities": 273275000000,
+          "shareholders_equity": 363076000000
+        },
+        {
+          "quarter": "Q2",
+          "period_start": "2025-10-01",
+          "period_end": "2025-12-31",
+          "revenue": 81273000000,
+          "gross_profit": 55295000000,
+          "operating_income": 38275000000,
+          "net_income": 38458000000,
+          "research_and_development": 8504000000,
+          "operating_cash_flow": 35758000000,
+          "total_assets": 665302000000,
+          "total_liabilities": 274427000000,
+          "shareholders_equity": 390875000000
+        },
+        {
+          "quarter": "Q3",
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31",
+          "revenue": 82886000000,
+          "gross_profit": 56058000000,
+          "operating_income": 38398000000,
+          "net_income": 31778000000,
+          "research_and_development": 8915000000,
+          "operating_cash_flow": 46679000000,
+          "total_assets": 694228000000,
+          "total_liabilities": 279861000000,
+          "shareholders_equity": 414367000000
+        },
+        {
+          "quarter": "Q4",
+          "period_start": "2026-04-01",
+          "period_end": "2026-06-30",
+          "revenue": 90007000000,
+          "gross_profit": 60482000000,
+          "operating_income": 40603000000,
+          "net_income": 35766000000,
+          "research_and_development": 9997000000,
+          "operating_cash_flow": 55441000000,
+          "total_assets": 758376000000,
+          "total_liabilities": 315989000000,
+          "shareholders_equity": 442387000000
+        }
+      ],
+      "full_year": {
+        "period_start": "2025-07-01",
+        "period_end": "2026-06-30",
+        "revenue": 331839000000,
+        "gross_profit": 225465000000,
+        "operating_income": 155237000000,
+        "net_income": 133749000000,
+        "research_and_development": 35562000000,
+        "operating_cash_flow": 182935000000
+      }
+    },
+    {
+      "name": "Amazon",
+      "legal_name": "AMAZON COM INC",
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "sector": "Retail and cloud",
+      "fiscal_year": 2026,
+      "status": "in progress: 2 of 4 quarters filed, annual 10-K not yet in this data",
+      "period_covered": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "months": 6
+      },
+      "notes": [
+        "Fiscal 2026 starts 2026-01-01.",
+        "gross_profit is not reported by this company; calculated as revenue minus cost of sales.",
+        "total_liabilities is not reported as a single figure; calculated as total assets minus all equity (including any minority interests).",
+        "research_and_development is null because this company does not report it under a standard tag.",
+        "net_income for the six months includes 69,062,000,000 USD of other non-operating income, so operating_income is the better measure of the underlying business."
+      ],
+      "quarters": [
+        {
+          "quarter": "Q1",
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31",
+          "revenue": 181519000000,
+          "gross_profit": 94056000000,
+          "operating_income": 23852000000,
+          "net_income": 30255000000,
+          "research_and_development": null,
+          "operating_cash_flow": 26032000000,
+          "total_assets": 916630000000,
+          "total_liabilities": 474716000000,
+          "shareholders_equity": 441914000000
+        },
+        {
+          "quarter": "Q2",
+          "period_start": "2026-04-01",
+          "period_end": "2026-06-30",
+          "revenue": 200606000000,
+          "gross_profit": 104828000000,
+          "operating_income": 27461000000,
+          "net_income": 62647000000,
+          "research_and_development": null,
+          "operating_cash_flow": 45387000000,
+          "total_assets": 1095689000000,
+          "total_liabilities": 544069000000,
+          "shareholders_equity": 551620000000
+        }
+      ],
+      "year_to_date": {
+        "period_start": "2026-01-01",
+        "period_end": "2026-06-30",
+        "revenue": 382125000000,
+        "gross_profit": 198884000000,
+        "operating_income": 51313000000,
+        "net_income": 92902000000,
+        "research_and_development": null,
+        "operating_cash_flow": 71419000000
+      }
+    },
+    {
+      "name": "Walmart",
+      "legal_name": "WALMART INC.",
+      "ticker": "WMT",
+      "cik": 104169,
+      "sector": "Retail",
+      "fiscal_year": 2027,
+      "status": "in progress: 2 of 4 quarters filed, annual 10-K not yet in this data",
+      "period_covered": {
+        "start": "2026-02-01",
+        "end": "2026-07-31",
+        "months": 6
+      },
+      "notes": [
+        "Walmart names its fiscal year after the January it ends in: fiscal 2027 starts 2026-02-01 and ends 2027-01-31.",
+        "Some quarterly figures (Q2) are not reported separately and are calculated by subtracting cumulative totals.",
+        "gross_profit is not reported by this company; calculated as revenue minus cost of sales.",
+        "total_liabilities is not reported as a single figure; calculated as total assets minus all equity (including any minority interests).",
+        "research_and_development is null because this company does not report it under a standard tag.",
+        "revenue is total revenues, which includes membership and other income as well as net sales."
+      ],
+      "quarters": [
+        {
+          "quarter": "Q1",
+          "period_start": "2026-02-01",
+          "period_end": "2026-04-30",
+          "revenue": 177751000000,
+          "gross_profit": 44693000000,
+          "operating_income": 7493000000,
+          "net_income": 5330000000,
+          "research_and_development": null,
+          "operating_cash_flow": 4738000000,
+          "total_assets": 289607000000,
+          "total_liabilities": 188632000000,
+          "shareholders_equity": 94330000000
+        },
+        {
+          "quarter": "Q2",
+          "period_start": "2026-05-01",
+          "period_end": "2026-07-31",
+          "revenue": 187937000000,
+          "gross_profit": 49133000000,
+          "operating_income": 9383000000,
+          "net_income": 6366000000,
+          "research_and_development": null,
+          "operating_cash_flow": 14972000000,
+          "total_assets": 293914000000,
+          "total_liabilities": 189115000000,
+          "shareholders_equity": 98238000000
+        }
+      ],
+      "year_to_date": {
+        "period_start": "2026-02-01",
+        "period_end": "2026-07-31",
+        "revenue": 365688000000,
+        "gross_profit": 93826000000,
+        "operating_income": 16876000000,
+        "net_income": 11696000000,
+        "research_and_development": null,
+        "operating_cash_flow": 19710000000
+      }
+    },
+    {
+      "name": "JPMorgan Chase",
+      "legal_name": "JPMORGAN CHASE & CO",
+      "ticker": "JPM",
+      "cik": 19617,
+      "sector": "Banking",
+      "fiscal_year": 2026,
+      "status": "in progress: 2 of 4 quarters filed, annual 10-K not yet in this data",
+      "period_covered": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "months": 6
+      },
+      "notes": [
+        "Fiscal 2026 starts 2026-01-01.",
+        "Some quarterly figures (Q2) are not reported separately and are calculated by subtracting cumulative totals.",
+        "pretax_income (income before income tax) is included as the closest equivalent to operating_income, which this company does not report.",
+        "For a bank, revenue is total net revenue (after interest expense) and operating_cash_flow largely reflects changes in trading assets and liabilities, so it is not a measure of business performance.",
+        "gross_profit is null because this company does not report it under a standard tag.",
+        "operating_income is null because this company does not report it under a standard tag.",
+        "research_and_development is null because this company does not report it under a standard tag."
+      ],
+      "quarters": [
+        {
+          "quarter": "Q1",
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31",
+          "revenue": 49836000000,
+          "gross_profit": null,
+          "operating_income": null,
+          "net_income": 16494000000,
+          "research_and_development": null,
+          "operating_cash_flow": -211761000000,
+          "total_assets": 4900475000000,
+          "total_liabilities": 4536437000000,
+          "shareholders_equity": 364038000000,
+          "pretax_income": 20479000000
+        },
+        {
+          "quarter": "Q2",
+          "period_start": "2026-04-01",
+          "period_end": "2026-06-30",
+          "revenue": 57347000000,
+          "gross_profit": null,
+          "operating_income": null,
+          "net_income": 21155000000,
+          "research_and_development": null,
+          "operating_cash_flow": -25283000000,
+          "total_assets": 5015069000000,
+          "total_liabilities": 4640471000000,
+          "shareholders_equity": 374598000000,
+          "pretax_income": 27516000000
+        }
+      ],
+      "year_to_date": {
+        "period_start": "2026-01-01",
+        "period_end": "2026-06-30",
+        "revenue": 107183000000,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 37649000000,
+        "research_and_development": null,
+        "operating_cash_flow": -237044000000,
+        "pretax_income": 47995000000
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Decision Simulator · StartupGuard AI</title>
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="decisions">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+  <div class="app-main">
+    <header class="page-header">
+      <div class="page-header-row">
+        <button type="button" class="icon-button menu-button" id="menu-button" aria-label="Open navigation" data-icon="menu" data-icon-class="lg"></button>
+        <div class="page-title">
+          <h1>Decision Simulator</h1>
+          <p>See what could happen before making an important business decision.</p>
+        </div>
+        <div class="header-actions" id="header-actions"></div>
+        <div class="header-account" id="header-account"></div>
+      </div>
+      <div class="header-actions-mobile" id="header-actions-mobile"></div>
+    </header>
+
+    <main class="page-body">
+      <section class="card clip" id="form-card">
+        <div class="sim-grid">
+          <form class="sim-form" id="decision-form" novalidate>
+            <div class="row" style="gap:12px;flex-wrap:nowrap">
+              <span class="chip-icon xl tone-blue-solid" data-icon="flask-conical"></span>
+              <div>
+                <h2 style="font-size:16px;font-weight:600">New Scenario</h2>
+                <p class="muted">Describe the decision you're considering.</p>
+              </div>
+            </div>
+
+            <fieldset class="sim-fields" id="form-fields">
+              <div class="field">
+                <label for="f-title">Decision Name</label>
+                <input class="input" id="f-title" name="title" required maxlength="200" value="Hire 2 coaches">
+              </div>
+              <div class="field">
+                <label for="f-type">Decision Type</label>
+                <select class="input" id="f-type" name="decision_type">
+                  <option value="hiring">Hiring</option>
+                  <option value="expansion">Expansion</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="pricing">Price change</option>
+                  <option value="product">New product</option>
+                  <option value="office">Office</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-monthly">Monthly Additional Cost</label>
+                <div class="input-prefix"><span>€</span><input class="input" id="f-monthly" name="expected_monthly_cost_change" type="number" step="100" value="3600"></div>
+                <p class="hint">Salaries, rent, subscriptions. Negative for savings.</p>
+              </div>
+              <div class="field">
+                <label for="f-onetime">One-Time Cost</label>
+                <div class="input-prefix"><span>€</span><input class="input" id="f-onetime" name="estimated_cost" type="number" min="0" step="100" value="0"></div>
+                <p class="hint">Equipment, fit-out, deposits</p>
+              </div>
+              <div class="field">
+                <label for="f-revenue">Expected Revenue Increase</label>
+                <div class="input-prefix"><span>€</span><input class="input" id="f-revenue" name="expected_revenue_change" type="number" step="100" value="1500"></div>
+                <p class="hint">Per month, once in effect. Negative for a drop.</p>
+              </div>
+              <div class="field">
+                <label for="f-customers">Customer Change</label>
+                <input class="input" id="f-customers" name="expected_customer_change" type="number" step="1" value="40">
+                <p class="hint">Expected change in customer count</p>
+              </div>
+              <div class="field full">
+                <label for="f-description">Description <span class="muted" style="font-weight:400">(optional)</span></label>
+                <textarea class="input" id="f-description" name="description" rows="2" maxlength="2000" placeholder="What is the decision and why?"></textarea>
+              </div>
+            </fieldset>
+
+            <div class="row" style="gap:12px">
+              <button type="submit" class="btn btn-primary btn-lg" id="simulate" data-icon="sparkles"><span class="label">Analyze Decision</span></button>
+              <span class="muted small">Saved as a proposed decision, so the server calculates the projection from your records.</span>
+            </div>
+            <div id="form-error"></div>
+          </form>
+
+          <aside class="sim-aside">
+            <p class="eyebrow">Current position</p>
+            <dl id="position"></dl>
+            <p>StartupGuard projects runway from your latest financial record. Then StartupGuard weighs the projection against competitor prices and market events before you commit.</p>
+          </aside>
+        </div>
+      </section>
+
+      <div id="result" hidden></div>
+
+      <section class="card">
+        <header class="card-header"><div><h2>Saved Scenarios</h2><p>Every decision stored for this business. Open one to see its projection.</p></div></header>
+        <div class="card-body tight" id="saved"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Chart.js, version-pinned. Falls back to the local copy when the CDN is unreachable (offline demo). -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script>window.Chart || document.write('<script src="js/vendor/chart.umd.min.js"><\/script>');</script>
+  <script src="js/icons.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/decisions.js"></script>
+</body>
+</html>

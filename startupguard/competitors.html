@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Competitors · StartupGuard AI</title>
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="competitors">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+  <div class="app-main">
+    <header class="page-header">
+      <div class="page-header-row">
+        <button type="button" class="icon-button menu-button" id="menu-button" aria-label="Open navigation" data-icon="menu" data-icon-class="lg"></button>
+        <div class="page-title">
+          <h1>Competitors</h1>
+          <p>Monitor local competitors, pricing and business activity.</p>
+        </div>
+        <div class="header-actions" id="header-actions"></div>
+        <div class="header-account" id="header-account"></div>
+      </div>
+      <div class="header-actions-mobile" id="header-actions-mobile"></div>
+    </header>
+
+    <main class="page-body">
+      <div class="grid grid-sm-2 grid-xl-4" id="kpis" aria-live="polite"></div>
+
+      <ul class="grid grid-sm-2 grid-xl-4" id="cards"></ul>
+
+      <section class="card">
+        <header class="card-header">
+          <div><h2>Competitor Price Trends</h2><p id="history-sub">Recorded product prices over time</p></div>
+          <div class="segmented" id="history-mode" role="group" aria-label="Price scale">
+            <button type="button" data-mode="index" aria-pressed="true">% since first</button>
+            <button type="button" data-mode="price" aria-pressed="false">Price</button>
+          </div>
+        </header>
+        <div class="card-body">
+          <div class="chips" id="history-filter" role="group" aria-label="Competitor" style="margin-bottom:12px"></div>
+          <div id="history-legend"></div>
+          <div class="chart-box h320"><canvas id="history-chart" role="img" aria-label="Line chart of competitor product prices over time"></canvas></div>
+        </div>
+      </section>
+
+      <section class="card clip">
+        <header class="card-header"><div><h2>Competitor Overview</h2><p>Every tracked product: price, previous price and latest change</p></div></header>
+        <div class="table-wrap" style="margin-top:16px" id="overview"></div>
+      </section>
+      <section class="card clip" id="benchmarks">
+        <header class="card-header">
+          <div><h2>Benchmark Companies</h2><p>Large public companies for reference, not competitors: compare margins and growth, not size</p></div>
+          <span class="badge info">Benchmark</span>
+        </header>
+        <div style="margin-top:16px" data-benchmarks-body></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Chart.js, version-pinned. Falls back to the local copy when the CDN is unreachable (offline demo). -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script>window.Chart || document.write('<script src="js/vendor/chart.umd.min.js"><\/script>');</script>
+  <script src="js/icons.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/competitors.js"></script>
+  <script src="js/benchmarks.js"></script>
+</body>
+</html>
